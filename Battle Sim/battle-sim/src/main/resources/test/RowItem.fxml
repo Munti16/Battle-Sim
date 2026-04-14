@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<HBox fx:id="rowRoot" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER_LEFT" fx:controller="test.RowController" style="-fx-background-color: transparent;">
+    <ComboBox fx:id="type" promptText="Select Type">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Attack" />
+                <String fx:value="Spell" />
+                <String fx:value="Buff" />
+                <String fx:value="Heal" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <ComboBox fx:id="category" promptText="Select Category"/>
+    <TextField fx:id="damage" promptText="Enter value..."/>
+    <Button text="X" onAction="#handleRemoveRow"/>
+</HBox>
